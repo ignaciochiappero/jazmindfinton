@@ -13,7 +13,7 @@ import 'swiper/css/effect-cards';
 // import required modules
 import { EffectCards } from 'swiper/modules';
 import Image from 'next/image';
-import Card from './card';
+import Card from './Card'
 
 export default function App() {
   return (
