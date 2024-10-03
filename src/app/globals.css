@@ -47,8 +47,8 @@ html {
 
 @media (max-width: 640px) { /* Breakpoint para pantallas móviles */
   .swiper {
-    width: 250px;
-    height: 230px;
+    width: 350px;
+    height: 500px;
   }
 }
 

@@ -7,7 +7,7 @@ const Card = () => {
       <div className="bg-pink-100 p-4 sm:p-6 rounded-2xl w-full h-full ">
         <div className="flex flex-col sm:flex-row items-start gap-4 mb-4">
           {/* Imagen cuadrada */}
-          <div className="w-full max-sm:w-[100px] aspect-square bg-gray-300 rounded-xl flex-shrink-0">
+          <div className="w-full max-sm:w-[100px] aspect-square bg-gray-300 rounded-xl max.sm:flex-shrink-0">
             <Image
               src="/images/about-image.png"
               width={100}
