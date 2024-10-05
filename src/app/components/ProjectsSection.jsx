@@ -10,7 +10,7 @@ const projectsData = [
     title: "React Portfolio Website",
     description: "Project 1 description",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    tag: ["Todo", "Belleza"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -19,7 +19,7 @@ const projectsData = [
     title: "Potography Portfolio Website",
     description: "Project 2 description",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
+    tag: ["Todo", "Moda"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -28,7 +28,7 @@ const projectsData = [
     title: "E-commerce Application",
     description: "Project 3 description",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    tag: ["Todo", "Gastronomía"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -37,7 +37,7 @@ const projectsData = [
     title: "Food Ordering Application",
     description: "Project 4 description",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["Todo", "Eventos"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -46,7 +46,7 @@ const projectsData = [
     title: "React Firebase Template",
     description: "Authentication and CRUD operations",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    tag: ["Todo", "Eventos"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -55,14 +55,14 @@ const projectsData = [
     title: "Full-stack Roadmap",
     description: "Project 5 description",
     image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    tag: ["Todo", "Otros"],
     gitUrl: "/",
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Todo");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -80,28 +80,47 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div className="mt-20 h-screen">
+    <div className="mt-20 ">
       <h2 className=" text-center text-4xl font-bold text-white mt-4 mb-6 md:mb-6">
         Mi Portafolio
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 pb-6">
+
+      {/* Tags */}
+      <div className="text-white flex flex-row justify-center items-center gap-2 pb-6 max-sm:grid-cols-3 max-sm:grid">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
+          name="Todo"
+          isSelected={tag === "Todo"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Moda"
+          isSelected={tag === "Moda"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Belleza"
+          isSelected={tag === "Belleza"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Gastronomía"
+          isSelected={tag === "Gastronomía"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Eventos"
+          isSelected={tag === "Eventos"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Otros"
+          isSelected={tag === "Otros"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+
+      {/* Cuadro proyectos */}
+      <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}

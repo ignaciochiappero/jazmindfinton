@@ -31,7 +31,7 @@ const Card = () => {
         </div>
 
         {/* Botones */}
-        <div className="flex flex-col sm:flex-row gap-3 w-full mt-20 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 w-full md:mt-16 max-sm:mt-7 sm:mt-16 justify-center items-center ">
           <button className="w-full sm:w-auto px-4 py-2 bg-white hover:bg-gray-50 rounded-full text-pink-600 font-medium text-sm whitespace-nowrap">
             ESCUCHALO EN YOUTUBE
           </button>

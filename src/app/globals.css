@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    
 }
 
 html {
@@ -47,7 +48,7 @@ html {
 
 @media (max-width: 640px) { /* Breakpoint para pantallas móviles */
   .swiper {
-    width: 350px;
+    width: 330px;
     height: 500px;
   }
 }

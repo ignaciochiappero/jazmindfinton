@@ -13,7 +13,9 @@ import 'swiper/css/effect-cards';
 // import required modules
 import { EffectCards } from 'swiper/modules';
 import Image from 'next/image';
-import Card from './Card'
+
+import Card from './podcasts/Card'
+import CardAntes from './podcasts/Card-Antes';
 
 export default function App() {
   return (
@@ -82,15 +84,41 @@ export default function App() {
         modules={[EffectCards]}
         className="mySwiper mt-10"
       >
-        <SwiperSlide>Antes que suceda</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
+
+        <SwiperSlide>   
+            <CardAntes/>
+        </SwiperSlide>
       </Swiper>
     </>
   );
