@@ -103,7 +103,7 @@ const TikTokEmbed = () => {
               tag === category
                 ? "text-secondary-600 border-primary-500"
                 : " transition-all text-secondary-600 border-primary-400 hover:border-secondary-300 hover:text-secondary-300"
-            } rounded-full border-2 px-4 py-2 text-lg max-sm:text-sm max-w-full overflow-hidden whitespace-nowrap`}
+            } rounded-full border-2 px-4 py-2 text-lg max-sm:text-xs max-w-full overflow-hidden whitespace-nowrap`}
             onClick={() => handleTagChange(category)}
           >
             {category}
