@@ -48,7 +48,6 @@ const videosData = [
     description: "Descripción del video 6",
     tag: ["Todo", "Otros"],
   },
-  // Añade más videos aquí
 ];
 
 const TikTokEmbed = () => {
@@ -59,10 +58,25 @@ const TikTokEmbed = () => {
 
   useEffect(() => {
     setIsClient(true);
+    loadTikTokScript(); // Cargar el script de TikTok al inicializar el componente
   }, []);
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
+    loadTikTokScript(); // Cargar el script de TikTok al cambiar la categoría
+  };
+
+  const loadTikTokScript = () => {
+    const existingScript = document.getElementById("tiktok-embed-script");
+    if (existingScript) {
+      existingScript.remove(); // Eliminar el script existente
+    }
+    
+    const script = document.createElement("script");
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    script.id = "tiktok-embed-script"; // Asignar un ID al script para referencia futura
+    document.body.appendChild(script); // Añadir el script al body
   };
 
   // Filtrar los videos por tag
@@ -136,9 +150,6 @@ const TikTokEmbed = () => {
             </motion.div>
           ))}
       </div>
-
-      {/* Script de TikTok para incrustar videos */}
-      {isClient && <script async src="https://www.tiktok.com/embed.js"></script>}
     </div>
   );
 };
