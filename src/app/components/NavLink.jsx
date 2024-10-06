@@ -4,7 +4,7 @@ const NavLink = ({ href, title }) => {
   return (
     <Link
       href={href}
-      className="block py-2 pl-3 pr-4 text-secondary-300  sm:text-xl rounded md:p-0 hover:text-rose-400 transition-all"
+      className="block py-2 pl-3 pr-4 text-secondary-500  sm:text-xl rounded md:p-0 hover:text-rose-400 transition-all"
     >
       {title}
     </Link>

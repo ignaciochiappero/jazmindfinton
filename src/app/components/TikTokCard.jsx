@@ -78,7 +78,7 @@ const TikTokEmbed = () => {
   return (
     <div className="container mx-auto p-4 mt-20">
       {/* Título */}
-      <h2 className="text-center text-4xl font-bold text-secondary-600 mb-6">Mi Portafolio de Videos</h2>
+      <h2 className="text-center text-4xl font-bold text-secondary-600 mb-6">Mi Portafolio</h2>
 
       {/* Filtros de categorías */}
       <div className="text-secondary-600 flex flex-wrap justify-center items-center gap-2 pb-6 max-sm:grid max-sm:grid-cols-3">
@@ -89,7 +89,7 @@ const TikTokEmbed = () => {
               tag === category
                 ? "text-secondary-600 border-primary-500"
                 : " transition-all text-secondary-600 border-primary-400 hover:border-secondary-300 hover:text-secondary-300"
-            } rounded-full border-2 px-4 py-2 text-lg max-w-full overflow-hidden whitespace-nowrap`}
+            } rounded-full border-2 px-4 py-2 text-lg max-sm:text-sm max-w-full overflow-hidden whitespace-nowrap`}
             onClick={() => handleTagChange(category)}
           >
             {category}
@@ -114,7 +114,7 @@ const TikTokEmbed = () => {
                 className="tiktok-embed"
                 cite={video.url}
                 data-video-id={video.videoId}
-                style={{ maxWidth: "605px", minWidth: "325px" }}
+                style={{ width: "100%", overflow: "hidden" }} // Cambios realizados
               >
                 <section>
                   <Link href={video.url} passHref>
