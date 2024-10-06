@@ -1,3 +1,5 @@
+// src\app\components\ProjectTag.jsx
+
 import React from "react";
 
 const ProjectTag = ({ name, onClick, isSelected }) => {

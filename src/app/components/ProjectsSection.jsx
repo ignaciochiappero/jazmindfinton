@@ -1,3 +1,5 @@
+// src\app\components\ProjectsSection.jsx
+
 "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
@@ -13,15 +15,17 @@ const projectsData = [
     tag: ["Todo", "Belleza"],
     gitUrl: "/",
     previewUrl: "/",
+    tiktokUrl: null, // No hay video de TikTok para este proyecto
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
+    title: "Photography Portfolio Website",
     description: "Project 2 description",
     image: "/images/projects/2.png",
     tag: ["Todo", "Moda"],
     gitUrl: "/",
     previewUrl: "/",
+    tiktokUrl: "https://www.tiktok.com/@user/video/123456789", // Video de TikTok
   },
   {
     id: 3,
@@ -31,6 +35,7 @@ const projectsData = [
     tag: ["Todo", "Gastronomía"],
     gitUrl: "/",
     previewUrl: "/",
+    tiktokUrl: null,
   },
   {
     id: 4,
@@ -40,6 +45,7 @@ const projectsData = [
     tag: ["Todo", "Eventos"],
     gitUrl: "/",
     previewUrl: "/",
+    tiktokUrl: "https://www.tiktok.com/@user/video/987654321", // Otro video de TikTok
   },
   {
     id: 5,
@@ -49,15 +55,17 @@ const projectsData = [
     tag: ["Todo", "Eventos"],
     gitUrl: "/",
     previewUrl: "/",
+    tiktokUrl: null,
   },
   {
     id: 6,
     title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    description: "Project 6 description",
     image: "/images/projects/6.png",
     tag: ["Todo", "Otros"],
     gitUrl: "/",
     previewUrl: "/",
+    tiktokUrl: "https://www.tiktok.com/@user/video/111222333", // Video de TikTok
   },
 ];
 
@@ -136,6 +144,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              tiktokUrl={project.tiktokUrl} // Añadido para pasar la URL de TikTok
             />
           </motion.li>
         ))}
