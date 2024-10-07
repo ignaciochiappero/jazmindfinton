@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
@@ -53,15 +53,43 @@ const videosData = [
 
 // Componente del botón flotante de WhatsApp
 const FloatingWhatsAppButton = () => {
-  return (
-    <motion.div
-      className="fixed bottom-8 right-8 z-50"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      <Link 
-        href="https://wa.me/+5493425253071"
+  const [isClicked, setIsClicked] = useState(false);
 
+  const handleClick = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      window.open("https://wa.me/+5493425253071", "_blank");
+      setIsClicked(false);
+    }, 600);
+  };
+
+  return (
+    <>
+      <AnimatePresence>
+        {isClicked && (
+          <motion.div
+            initial={{ scale: 0, borderRadius: "100%" }}
+            animate={{ scale: 30, borderRadius: "100%" }}
+            exit={{ scale: 0 }}
+            style={{
+              position: "fixed",
+              bottom: "2rem",
+              right: "2rem",
+              width: "64px",
+              height: "64px",
+              backgroundColor: "#DB2777",
+              zIndex: 40,
+              transformOrigin: "center center",
+            }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          />
+        )}
+      </AnimatePresence>
+      
+      <motion.div
+        className="fixed bottom-8 right-8 z-50"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
         <motion.div
           className="bg-primary-500 p-4 rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:bg-primary-600"
@@ -73,11 +101,12 @@ const FloatingWhatsAppButton = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          onClick={handleClick}
         >
           <FaWhatsapp className="text-white w-8 h-8" />
         </motion.div>
-      </Link>
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
