@@ -41,8 +41,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#ce85d6] bg-opacity-20 backdrop-blur-md  ">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-end mx-auto px-4 py-2">
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#ce85d6] bg-opacity-20 backdrop-blur-md   ">
+      <div className="flex container lg:py-4 flex-wrap items-center justify-end mx-auto px-4 py-2 ">
         <div className="mobile-menu block md:hidden">
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
 
         <div className="menu hidden md:block md:w-auto " id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-4  md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />

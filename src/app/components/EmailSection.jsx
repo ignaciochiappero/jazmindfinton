@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { RiInstagramFill } from "react-icons/ri";
 import { AiFillTikTok } from "react-icons/ai";
+import { FaWhatsappSquare } from "react-icons/fa";
+
 
 const EmailSection = () => {
   return (
@@ -27,6 +29,9 @@ const EmailSection = () => {
           </Link>
           <Link href="https://www.tiktok.com/@jazmind.finton">
             <AiFillTikTok className="text-gray-500 h-10 w-10 transition-transform transform hover:scale-110 hover:text-secondary-500 " />
+          </Link>
+          <Link href="https://wa.me/+5493425253071">
+            <FaWhatsappSquare  className="text-gray-500 h-10 w-10 transition-transform transform hover:scale-110 hover:text-secondary-500 " />
           </Link>
         </div>
       </div>
