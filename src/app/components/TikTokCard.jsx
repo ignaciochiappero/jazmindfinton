@@ -116,7 +116,7 @@ const TikTokEmbed = () => {
         {isClient &&
           filteredVideos.map((video, index) => (
             <motion.div
-              key={index}
+              key={video.videoId} // Usar el videoId como key para evitar problemas de duplicados
               className="video-card bg-white p-4 rounded-lg shadow-md"
               variants={cardVariants}
               initial="initial"
