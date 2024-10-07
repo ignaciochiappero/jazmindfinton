@@ -1,27 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 const FlowerButton = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    if (!clicked) {
+      setClicked(true); // Deshabilitar el botón
+      setTimeout(() => {
+        // Redirigir después de 1.5 segundos
+        window.location.href = '/portfolio'; // Cambiar la ubicación de la ventana
+      }, 1500);
+    }
+  };
+
   return (
-    <div className="flex items-center justify-center p-8">
-      <button className="relative group bg-green-500 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-green-600">
-        Hover sobre mí
-        
-        {/* Tallo de la flor */}
-        <div className="absolute left-1/2 bottom-full -translate-x-1/2 w-1 h-0 group-hover:h-12 bg-green-600 transition-all duration-500"></div>
-        
-        {/* Pétalos de la flor */}
-        <div className="absolute left-1/2 bottom-full -translate-x-1/2 -translate-y-12 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300">
+    <div className="ml-3 lg:ml-16">
+      {/* BOTÓN */}
+      <button
+        onClick={handleClick}
+        disabled={clicked} // Deshabilitar el botón si ya fue clickeado
+        className={`px-1 inline-block w-full sm:w-fit rounded-full text-white ${clicked ? 'opacity-50 cursor-not-allowed' : ''}`}
+      >
+        <div className="button">
+          <div className="button__content">
+            <span className="button__text">Conocé mi trabajo</span>
 
-          
-          {/* Pétalos */}
-          <div className="absolute w-5 h-5 bg-pink-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-300 delay-500" style={{ top: '-10px' }}></div>
-          <div className="absolute w-5 h-5 bg-pink-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-300 delay-500" style={{ top: '10px' }}></div>
-          <div className="absolute w-5 h-5 bg-pink-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-300 delay-500" style={{ left: '-10px' }}></div>
-          <div className="absolute w-5 h-5 bg-pink-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition-transform duration-300 delay-500" style={{ left: '10px' }}></div>
+            <div className="button__reflection-1"></div>
+            <div className="button__reflection-2"></div>
+          </div>
 
+          <img src="./star.png" alt="" className="button__star-1" />
+          <img src="./star.png" alt="" className="button__star-2" />
+          <img src="./circle.png" alt="" className="button__circle-1" />
+          <img src="./circle.png" alt="" className="button__circle-2" />
+          <img src="./diamond.png" alt="" className="button__diamond" />
+          <img src="./triangle.png" alt="" className="button__triangle" />
 
-                    {/* Centro de la flor */}
-                    <div className="absolute w-4 h-4 bg-yellow-400 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="button__shadow"></div>
         </div>
       </button>
     </div>

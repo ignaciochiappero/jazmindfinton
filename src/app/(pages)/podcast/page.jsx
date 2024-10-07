@@ -1,4 +1,3 @@
-import ProjectsSection from '@/app/components/ProjectsSection'
 import React from 'react'
 import App from './swiper/App'
 
