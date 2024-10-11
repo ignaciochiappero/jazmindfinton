@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="mobile-menu block md:hidden">
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
-            className="flex items-center px-3 py-2 border rounded-full border-secondary-300  text-secondary-500 hover:text-secondary-300 hover:border-secondary-300  transition-all duration-300"
+            className="flex items-center px-3 py-2 border rounded-full border-secondary-500  text-secondary-500 hover:text-secondary-600 hover:border-secondary-600  transition-all duration-300"
           >
             {/* Animación condicional entre Bars3Icon y XMarkIcon */}
             {!navbarOpen ? (

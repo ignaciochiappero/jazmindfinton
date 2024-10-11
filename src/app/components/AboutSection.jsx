@@ -61,15 +61,24 @@ const AboutSection = () => {
 
   return (
     <>
-      <section className="lg:py-16">
+
+
+
+
+      {/* Sección text animado */}
+      <section className="xl:ml-16">
+
+
         <div className="  grid grid-cols-1 sm:grid-cols-12 max-sm:flex max-sm:justify-center max-sm:items-center">
+
+
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start "
           >
-            <h1 className="text-white mb-4 text-4xl max-sm:text-3xl sm:text-5xl lg:text-6xl xl:text-8xl lg:leading-normal font-extrabold">
+            <h1 className="text-white  text-4xl max-sm:text-3xl sm:text-5xl lg:text-6xl xl:text-6xl lg:leading-normal font-extrabold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">
                 Hola, soy{" "}
               </span>
@@ -92,23 +101,32 @@ const AboutSection = () => {
                 repeat={Infinity}
               />
             </h1>
-            {/* <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
-          </p> */}
+
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="col-span-4 place-self-center mt-4 lg:mt-0"
+            className="col-span-4 place-self-center mt-0"
           >
 
           </motion.div>
         </div>
       </section>
 
-      <section className="text-white" id="about">
+
+
+
+
+
+
+
+
+
+
+
+      <section className="text-white " id="about">
         <div className=" md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-8 xl:px-16">
           <Image
             src="/images/about-image.png"
