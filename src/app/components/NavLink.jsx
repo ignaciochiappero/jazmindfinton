@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const NavLink = ({ href, title }) => {
+const NavLink = ({ href, title, onClick }) => {
   return (
     <>
       {/* Estilo en línea para importar la fuente */}
@@ -15,6 +15,7 @@ const NavLink = ({ href, title }) => {
       <Link
         href={href}
         className="nav-link block py-2 pl-3 pr-4 text-secondary-500 sm:text-md rounded md:p-0 hover:text-rose-400 transition-all"
+        onClick={onClick} // Agregar el onClick aquí
       >
         {title}
       </Link>
