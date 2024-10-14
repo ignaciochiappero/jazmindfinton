@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#ce85d6] bg-opacity-20 backdrop-blur-md">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-start mx-auto px-4 py-2">
+      <div className="flex container lg:py-4 flex-wrap items-center max-sm:justify-start sm:justify-end mx-auto px-4 py-2">
         <div className="mobile-menu block md:hidden">
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
