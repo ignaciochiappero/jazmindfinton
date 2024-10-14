@@ -1,26 +1,14 @@
-"use client"
-
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+"use client";
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-
-
-
-// import required modules
 import { EffectCards } from 'swiper/modules';
-import Image from 'next/image';
-
-import Card from './podcasts/Card'
-import CardAntes from './podcasts/Card-Antes';
+import Card from './podcasts/Card'; // Asegúrate de que esté correctamente importado
 
 export default function App() {
   return (
     <>
-
       {/* La pelea del Dorado */}
       <Swiper
         effect={'cards'}
@@ -28,54 +16,13 @@ export default function App() {
         modules={[EffectCards]}
         className="mySwiper max-sm:swiper-mb"
       >
-        <SwiperSlide>   
-            <Card/>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/>        
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/> 
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <Card/>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/>        
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/> 
-        </SwiperSlide>
-        <SwiperSlide>   
-            <Card/>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/>        
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/> 
-        </SwiperSlide>
-        <SwiperSlide>   
-            <Card/>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/>        
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Card/> 
-        </SwiperSlide>
-
+        {/* Mapea sobre todos los episodios de "laPeleaDelDorado" */}
+        {Array.from({ length: 7 }).map((_, index) => (  // Cambiado para iterar sobre 7 episodios
+          <SwiperSlide key={index}>
+            <Card podcastType="laPeleaDelDorado" episodeIndex={index} />
+          </SwiperSlide>
+        ))}
       </Swiper>
-
 
       {/* Antes que suceda */}
       <Swiper
@@ -84,41 +31,12 @@ export default function App() {
         modules={[EffectCards]}
         className="mySwiper mt-10"
       >
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
-
-        <SwiperSlide>   
-            <CardAntes/>
-        </SwiperSlide>
+        {/* Mapea sobre todos los episodios de "antesQueSuceda" */}
+        {Array.from({ length: 7 }).map((_, index) => (  // Cambiado para iterar sobre 7 cartas
+          <SwiperSlide key={index}>
+            <Card podcastType="antesQueSuceda" episodeIndex={index} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
