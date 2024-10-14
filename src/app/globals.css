@@ -50,7 +50,7 @@ html {
 
 @media (max-width: 640px) { /* Breakpoint para pantallas móviles */
   .swiper {
-    width: 330px;
+    width: 290px;
     height: 500px;
   }
 }
@@ -96,26 +96,7 @@ html {
   --normal-font-size: 1rem;
 }
 
-/*=============== BASE ===============*/
-/* * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background: #151F28;
-} */
-
-/*=============== BUTTON ===============*/
-/* .container {
-  height: 100vh;
-  margin-inline: 1.5rem;
-  display: grid;
-  place-items: center;
-} */
 
 .button {
   position: relative;

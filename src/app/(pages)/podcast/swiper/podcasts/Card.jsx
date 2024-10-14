@@ -97,7 +97,7 @@ const Card = ({ podcastType, episodeIndex }) => {
   const episode = podcast[episodeIndex];
 
   return (
-    <div className="bg-pink-100 p-4 rounded-3xl w-full max-w-2xl mx-auto text-start bg-white/50 backdrop-blur-md border border-white/20 shadow-lg shadow-white/10 p-2">
+    <div className="bg-pink-100  rounded-3xl w-full max-w-2xl mx-auto text-start bg-white/50 backdrop-blur-md border border-white/20 shadow-lg shadow-white/10 p-2">
       <div className="flex flex-col md:flex-row gap-4">
         {/* Imagen */}
         <div className="w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden">
@@ -112,7 +112,7 @@ const Card = ({ podcastType, episodeIndex }) => {
 
         {/* Contenido */}
         <div className="flex flex-col md:w-2/3">
-          <h2 className="text-xl font-bold mb-2 text-secondary-400">{episode.title}</h2>
+          <h2 className="max-sm:text-sm sm:text-xl font-bold mb-2 text-secondary-400">{episode.title}</h2>
           
           <p className="text-sm text-gray-700 mb-4 flex-grow">
             {episode.description}
