@@ -120,11 +120,11 @@ const Card = ({ podcastType, episodeIndex }) => {
 
           {/* Botones */}
           <div className="flex flex-col sm:flex-row justify-center mb-5 gap-2">
-            <button className="w-full sm:w-auto px-4 py-1 bg-white hover:bg-secondary-300 transition-all rounded-full text-pink-600 font-medium text-sm">
+            <button className="w-full sm:w-auto px-4 py-1 bg-white hover:bg-red-500 hover:text-white transition-all rounded-full text-pink-600 font-medium text-sm">
               Escuchar en YouTube
             </button>
 
-            <button className="w-full sm:w-auto px-4 max-sm:py-1 sm:py-2 bg-white hover:bg-secondary-300 transition-all rounded-full text-pink-600 font-medium text-sm">
+            <button className="w-full sm:w-auto px-4 max-sm:py-1 sm:py-2 bg-white hover:bg-green-500 hover:text-white transition-all rounded-full text-pink-600 font-medium text-sm">
               Escuchar en Spotify
             </button>
           </div>
