@@ -14,10 +14,10 @@ const navLinks = [
     title: "Portfolio",
     path: "/portfolio",
   },
-  {
-    title: "Podcast",
-    path: "/podcast",
-  },
+  // {
+  //   title: "Podcast",
+  //   path: "/podcast",
+  // },
 ];
 
 const Navbar = () => {

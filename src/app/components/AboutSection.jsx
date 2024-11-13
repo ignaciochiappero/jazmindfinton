@@ -35,15 +35,20 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Diseño Gráfico </li>
-        <li>
+        <li>Asesorías uno a uno para emprendedores </li>
+        <li>Creación de contenido </li>
+        <li>Creadora UGC </li>
+        
+        
+        
+        {/* <li>
           Belleza:
           <ul>
             <li>Lifting de Pestañas</li>
             <li>Perfilado de cejas</li>
             <li>Laminado de cejas</li>
           </ul>
-        </li>
+        </li> */}
       </ul>
     ),
   },
@@ -146,13 +151,13 @@ const AboutSection = () => {
                 {" "}
                 UGC{" "}
               </TabButton>
-              <TabButton
+              {/* <TabButton
                 selectTab={() => handleTabChange("education")}
                 active={tab === "education"}
               >
                 {" "}
                 Podcast{" "}
-              </TabButton>
+              </TabButton> */}
               <TabButton
                 selectTab={() => handleTabChange("certifications")}
                 active={tab === "certifications"}
